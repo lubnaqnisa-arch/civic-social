@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Peri Cinta Damai – Pendidikan Pancasila Kelas 3</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#d8f0fb;--card:#fffdf6;--ink:#23324a;--sky:#4aa8d8;--sun:#ffc83d;--rose:#ef6f8e;--leaf:#3fae6a;--plum:#9a5fc4;--bad:#e5533d;--shadow:#23324a22;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17304a;--card:#223a57;--ink:#f6f2e6;--shadow:#0006}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:'Nunito','Trebuchet MS',sans-serif;font-weight:600;font-size:clamp(18px,1.6vw,26px);line-height:1.5}
+h1,h2,h3,.b{font-family:'Baloo 2','Comic Sans MS',sans-serif;font-weight:800;line-height:1.15;margin:0}
+button{font:inherit;color:inherit;cursor:pointer;border:0;touch-action:manipulation}
+header{display:flex;align-items:center;gap:1rem;padding:.6rem 1.2rem;background:var(--sky);color:#fff;position:sticky;top:0;z-index:5}
+header .fairy{font-size:2.2rem}
+header h1{font-size:1.5rem;flex:1}
+nav{display:flex;gap:.5rem;flex-wrap:wrap;padding:.8rem 1.2rem}
+nav button{padding:.7rem 1.2rem;border-radius:99px;background:var(--card);font-family:'Baloo 2',sans-serif;font-weight:700;box-shadow:0 3px 0 var(--shadow);min-height:56px}
+nav button[aria-selected=true]{background:var(--sun);color:#23324a;transform:translateY(2px);box-shadow:none}
+main{max-width:1500px;margin:0 auto;padding:0 1.2rem 2rem}
+section{display:none}section.on{display:block;animation:in .35s}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+.card{background:var(--card);border-radius:28px;padding:1.4rem 1.8rem;box-shadow:0 6px 0 var(--shadow);margin-bottom:1.2rem}
+.hero{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;background:linear-gradient(135deg,#fff3c4,#ffe0ea);color:#23324a}
+.hero h2{font-size:clamp(2.2rem,5vw,4.2rem);color:var(--plum)}
+.big{font-size:clamp(7rem,14vw,11rem);cursor:pointer;animation:float 3s ease-in-out infinite;user-select:none}
+@keyframes float{50%{transform:translateY(-14px) rotate(4deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.btn{background:var(--leaf);color:#fff;padding:.8rem 1.6rem;border-radius:20px;font-family:'Baloo 2',sans-serif;font-weight:700;font-size:1.2rem;box-shadow:0 4px 0 #0003;min-height:60px}
+.btn:active{transform:translateY(3px);box-shadow:none}
+.btn.alt{background:var(--sun);color:#23324a}.btn.rose{background:var(--rose)}
+.goal li{margin:.3rem 0}
+.speech{background:#fff;color:#23324a;border-radius:20px;padding:.8rem 1.2rem;margin-top:1rem;border:3px dashed var(--sun);min-height:3.2em}
+/* comic */
+.panel{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;align-items:center;min-height:52vh}
+.art{border-radius:24px;min-height:40vh;display:flex;align-items:center;justify-content:center;font-size:clamp(4.5rem,10vw,8rem);gap:.4rem;text-align:center;color:#23324a}
+.tag{display:inline-block;background:var(--plum);color:#fff;border-radius:99px;padding:.2rem 1rem;font-family:'Baloo 2',sans-serif;margin-bottom:.6rem}
+.panel p{font-size:clamp(1.3rem,2.4vw,2.2rem);margin:.2rem 0}
+.dots{display:flex;gap:.5rem;justify-content:center;margin:.6rem 0}
+.dots i{width:16px;height:16px;border-radius:50%;background:var(--shadow)}.dots i.on{background:var(--rose)}
+.ctrl{display:flex;justify-content:space-between;gap:1rem}
+/* clouds */
+.clouds{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem}
+.opt{display:block;width:100%;text-align:left;background:#fff;color:#23324a;border-radius:18px;padding:.8rem 1.1rem;margin:.5rem 0;border:4px solid #e7e1cf;min-height:60px;font-weight:800}
+.opt.ok{border-color:var(--leaf);background:#dff7e7}.opt.no{border-color:var(--bad);background:#ffe3de;animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.fb{min-height:2.6em;margin:.3rem 0;font-weight:800}
+.feel{display:flex;gap:.6rem;flex-wrap:wrap}.feel button{font-size:2.6rem;background:#fff;border-radius:20px;padding:.3rem .8rem;border:4px solid #e7e1cf}
+/* advice */
+.cloud{background:#eaf4ff;color:#23324a;border-radius:40px;padding:1rem 1.4rem;min-height:9rem;border:4px solid #bcd9f5}
+.cloud div{background:#fff;border-radius:14px;padding:.4rem .9rem;margin:.4rem 0;border-left:8px solid var(--leaf);animation:in .3s}
+/* materi */
+.acc{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.2rem}
+.flip{background:var(--card);border-radius:28px;padding:1.4rem;box-shadow:0 6px 0 var(--shadow);text-align:left;min-height:15rem;border:5px solid transparent}
+.flip .ic{font-size:3.4rem}.flip h3{font-size:1.6rem;margin:.2rem 0}
+.flip .more{display:none;margin-top:.5rem}.flip.open .more{display:block}.flip.open{border-color:var(--sun)}
+.steps{display:flex;gap:.8rem;flex-wrap:wrap}.steps div{flex:1;min-width:150px;background:#fff7d6;color:#23324a;border-radius:18px;padding:.6rem;text-align:center}
+/* quiz */
+.q h2{font-size:clamp(1.5rem,2.8vw,2.3rem);margin-bottom:.8rem}
+.bar{height:20px;background:var(--shadow);border-radius:99px;overflow:hidden;margin-bottom:1rem}.bar i{display:block;height:100%;background:var(--sun);width:0;transition:width .4s}
+.stars{font-size:4rem;text-align:center}
+canvas{width:100%;height:46vh;background:#fff;border-radius:24px;border:5px dashed var(--sun);touch-action:none;display:block}
+.tools{display:flex;gap:.6rem;flex-wrap:wrap;margin:.8rem 0;align-items:center}
+.sw{width:56px;height:56px;border-radius:50%;border:5px solid #fff;box-shadow:0 2px 0 var(--shadow)}.sw.sel{border-color:#23324a}
+@media (max-width:800px){.hero,.panel{grid-template-columns:1fr}}
+button:focus-visible{outline:4px solid var(--plum);outline-offset:3px}
+</style>
+</head>
+<body>
+<header><span class="fairy">🧚</span><h1>Peri Cinta Damai · Pendidikan Pancasila Kelas 3</h1><span class="b">Unit 2</span></header>
+<nav id="nav" role="tablist"></nav>
+<main>
+
+<section id="s0" class="on">
+ <div class="card hero">
+  <div>
+   <h2>Peri Cinta Damai</h2>
+   <p>Halo, teman-teman! Aku Peri Cinta Damai. Aku ingin anak-anak Indonesia hidup rukun dan damai, tidak bermusuhan, dan tidak bertengkar.</p>
+   <div class="speech" id="speech">Sentuh aku, ya! 👆</div>
+   <p><button class="btn" onclick="go(1)">Mulai Cerita ▶</button></p>
+  </div>
+  <div class="big" id="peri" role="button" aria-label="Sentuh Peri">🧚‍♀️</div>
+ </div>
+ <div class="card goal"><h3>Tujuan Belajar Kita</h3>
+  <ul><li>Menceritakan kisah persahabatan Vania dan Ella.</li><li>Memahami arti rukun, damai, dan cinta damai.</li><li>Memberi nasihat agar sahabat berbaikan lagi.</li><li>Mengamalkan sikap cinta damai di sekolah dan di rumah.</li></ul>
+ </div>
+</section>
+
+<section id="s1">
+ <div class="card"><div class="dots" id="dots"></div>
+ <div class="panel"><div class="art" id="art"></div><div><span class="tag" id="tag"></span><p id="ptxt"></p></div></div>
+ <div class="ctrl"><button class="btn alt" id="prev">◀ Kembali</button><button class="btn" id="next">Lanjut ▶</button></div></div>
+</section>
+
+<section id="s2">
+ <div class="card"><h2>Tiga Pertanyaan Sang Peri 💭</h2><p>Sentuh jawabanmu pada awan pikiran Peri. Lalu ceritakan juga dengan suaramu di depan kelas!</p></div>
+ <div class="clouds" id="clouds"></div>
+</section>
+
+<section id="s3">
+ <div class="card"><h2>Nasihat Peri Cinta Damai 📖</h2>
+  <p>Di buku harian, Ella menulis: <em>“Aku masih kesal karena sekarang Vania punya sahabat baru… Namun, sebenarnya aku sedih sekali. Apa yang harus aku lakukan?”</em></p>
+  <p>Sentuh kartu nasihat yang baik. Kartu yang tepat akan terbang ke awan Peri!</p></div>
+ <div class="clouds" id="adv"></div>
+ <div class="card" style="margin-top:1.2rem"><h3>Bayangkan saat mereka bertemu lagi 🎨</h3>
+  <p>Gambarlah suasana Vania dan Ella setelah dinasihati Peri.</p>
+  <div class="tools" id="tools"></div><canvas id="cv"></canvas></div>
+</section>
+
+<section id="s4">
+ <div class="card"><h2>Belajar Cinta Damai 🕊️</h2><p>Sentuh setiap kartu untuk membuka isinya.</p></div>
+ <div class="acc" id="acc"></div>
+ <div class="card" style="margin-top:1.2rem"><h3>Empat Langkah Berdamai</h3>
+  <div class="steps"><div><div style="font-size:2.4rem">😮‍💨</div><b>1. Tenang</b><br>Tarik napas dalam.</div><div><div style="font-size:2.4rem">🗣️</div><b>2. Bicara</b><br>Sampaikan perasaan dengan sopan.</div><div><div style="font-size:2.4rem">👂</div><b>3. Mendengar</b><br>Dengarkan temanmu.</div><div><div style="font-size:2.4rem">🤝</div><b>4. Maaf</b><br>Minta maaf dan memaafkan.</div></div></div>
+</section>
+
+<section id="s5">
+ <div class="card q" id="quiz"></div>
+</section>
+</main>
+
+<script>
+const $=s=>document.querySelector(s);
+const tabs=['🏠 Kenalan','📚 Komik','💭 Pertanyaan','📖 Nasihat','🕊️ Materi','⭐ Kuis'];
+nav.innerHTML=tabs.map((t,i)=>`<button role="tab" onclick="go(${i})">${t}</button>`).join('');
+function go(i){document.querySelectorAll('section').forEach((s,j)=>s.classList.toggle('on',i===j));document.querySelectorAll('nav button').forEach((b,j)=>b.setAttribute('aria-selected',i===j));scrollTo({top:0});if(i===3)sizeCv();}
+go(0);
+/* peri */
+const lines=['Aku ingin semua anak hidup rukun! 💖','Bertengkar membuat hati sedih. 😢','Berdamai membuat hati senang! 😊','Ayo kita bantu Vania dan Ella! 🤝'];let li=0;
+peri.onclick=()=>{speech.textContent=lines[li++%lines.length];};
+/* komik */
+const P=[
+['Bagian 1 – Kisah persahabatan','Vania dan Ella bersahabat sejak kecil.','👧🏽👧🏿🐥','#cdeeb4'],
+['Bagian 1 – Kisah persahabatan','Vania gemar menari, sedangkan Ella senang menggambar.','💃🏽🎨👧🏿','#fff0b3'],
+['Bagian 1 – Kisah persahabatan','Walaupun berbeda, mereka tetap bermain bersama.','🛝👧🏽🎠👧🏿','#d2ecff'],
+['Bagian 1 – Kisah persahabatan','Setiap pulang sekolah, mereka makan siang, bermain, dan belajar bersama.','🏡🍱📚','#ffe6cf'],
+['Bagian 2 – Semester berganti','Pak Budi memperkenalkan siswa baru bernama Sasha. Sasha ramah dan periang.','👨🏻‍🏫👧🏻✨','#e9ddff'],
+['Bagian 2 – Semester berganti','Sasha juga gemar dan pandai menari seperti Vania.','💃🏽💃🏻','#ffe0ea'],
+['Bagian 3 – Vania bersahabat dengan Sasha','Vania mengambil kursus menari bersama Sasha dan lebih sering bersamanya dibandingkan dengan Ella.','👧🏽🤝👧🏻','#d2ecff'],
+['Bagian 3 – Vania bersahabat dengan Sasha','Ella merasa Vania menjauhinya. Ia tak mau lagi berbicara dengan Vania.','😠👧🏿💔','#ffd3cc'],
+['Bagian 3 – Vania bersahabat dengan Sasha','Peri Cinta Damai punya tiga pertanyaan di kepalanya… Ayo kita jawab!','🧚‍♀️❓❓❓','#dff7e7']];
+let pi=0;
+function drawP(){const p=P[pi];art.style.background=p[3];art.textContent=p[2];tag.textContent=p[0];ptxt.textContent=p[1];
+dots.innerHTML=P.map((_,i)=>`<i class="${i<=pi?'on':''}"></i>`).join('');prev.style.visibility=pi?'visible':'hidden';next.textContent=pi===P.length-1?'Jawab Pertanyaan Peri ▶':'Lanjut ▶';}
+prev.onclick=()=>{pi--;drawP()};next.onclick=()=>{if(pi===P.length-1){go(2)}else{pi++;drawP()}};drawP();
+/* pertanyaan */
+const Q=[
+{q:'1. Menurutmu, mengapa Ella tidak mau lagi berbicara kepada Vania?',o:[['Ella merasa dijauhi dan sedih karena Vania punya sahabat baru.',1],['Ella tidak suka menggambar lagi.',0],['Vania pindah ke kota lain.',0]],ok:'Betul! Ella merasa ditinggalkan, jadi ia sedih dan kesal.',no:'Coba baca lagi bagian 3, ya.'},
+{q:'2. Menurutmu, bagaimana agar Vania dan Ella bisa berteman lagi?',o:[['Saling bicara baik-baik dan saling meminta maaf.',1],['Saling mendiamkan sampai lupa.',0],['Mencari teman baru dan melupakan sahabat lama.',0]],ok:'Hebat! Bicara dan meminta maaf membuat hati lega.',no:'Diam saja tidak menyelesaikan masalah.'}];
+clouds.innerHTML=Q.map((x,i)=>`<div class="card"><h3>${x.q}</h3>${x.o.map(o=>`<button class="opt" data-c="${o[1]}" onclick="pick(this,${i})">${o[0]}</button>`).join('')}<div class="fb" id="fb${i}"></div></div>`).join('')+
+`<div class="card"><h3>3. Pernahkah kamu dan sahabatmu tidak saling bicara? Bagaimana perasaanmu?</h3><div class="feel">${[['😢','sedih'],['😠','marah'],['😔','kesepian'],['😕','bingung']].map(f=>`<button onclick="feel('${f[1]}')" aria-label="${f[1]}">${f[0]}</button>`).join('')}</div><div class="fb" id="fb2"></div><p>Ceritakan kisahmu kepada teman atau Bu/Pak Guru!</p></div>`;
+function pick(b,i){const ok=b.dataset.c==='1';b.classList.add(ok?'ok':'no');$('#fb'+i).textContent=ok?Q[i].ok:Q[i].no;}
+function feel(f){fb2.textContent=`Perasaan ${f} itu wajar. Ceritakan kepada orang yang kamu percaya, lalu ajak sahabatmu bicara baik-baik. 💛`;}
+/* nasihat */
+const A=[
+{t:'Nasihat untuk Ella',c:[['Ceritakan perasaanmu kepada Vania dengan baik.',1],['Jangan memendam kesal. Ajak Vania berbicara.',1],['Jangan bicara lagi dengan Vania selamanya.',0],['Vania boleh punya banyak teman, kamu tetap sahabatnya.',1]]},
+{t:'Nasihat untuk Vania',c:[['Minta maaf karena Ella merasa dijauhi.',1],['Ajak Ella dan Sasha bermain bersama.',1],['Abaikan saja Ella.',0],['Luangkan waktu untuk semua sahabatmu.',1]]}];
+adv.innerHTML=A.map((a,i)=>`<div class="card"><h3>${a.t}</h3><div class="cloud" id="cl${i}"></div>${a.c.map(c=>`<button class="opt" data-c="${c[1]}" onclick="adviceP(this,${i})">${c[0]}</button>`).join('')}</div>`).join('');
+function adviceP(b,i){if(b.dataset.c==='1'){if(!b.classList.contains('ok')){b.classList.add('ok');const d=document.createElement('div');d.textContent=b.textContent;$('#cl'+i).appendChild(d)}}else{b.classList.remove('no');void b.offsetWidth;b.classList.add('no');setTimeout(()=>b.classList.remove('no'),700)}}
+/* gambar */
+const cv=$('#cv'),cx=cv.getContext('2d');let col='#ef6f8e',draw=false;
+const cols=['#ef6f8e','#4aa8d8','#3fae6a','#ffc83d','#9a5fc4','#23324a'];
+tools.innerHTML=cols.map((c,i)=>`<button class="sw ${i?'':'sel'}" style="background:${c}" aria-label="warna ${i+1}" onclick="setC('${c}',this)"></button>`).join('')+`<button class="btn rose" onclick="sizeCv(true)">🧽 Hapus</button>`;
+function setC(c,b){col=c;document.querySelectorAll('.sw').forEach(x=>x.classList.remove('sel'));b.classList.add('sel')}
+function sizeCv(clear){if(!cv.offsetWidth)return;if(clear||cv.width!==cv.offsetWidth){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight}}
+function pos(e){const r=cv.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]}
+cv.onpointerdown=e=>{draw=true;cv.setPointerCapture(e.pointerId);cx.beginPath();cx.moveTo(...pos(e))};
+cv.onpointermove=e=>{if(!draw)return;cx.strokeStyle=col;cx.lineWidth=9;cx.lineCap='round';cx.lineJoin='round';cx.lineTo(...pos(e));cx.stroke()};
+cv.onpointerup=cv.onpointercancel=()=>draw=false;
+/* materi */
+const M=[['🕊️','Apa itu cinta damai?','Cinta damai adalah sikap suka hidup rukun, tidak bertengkar, dan tidak bermusuhan.','Contoh: bermain bersama tanpa saling mengejek.'],
+['🏡','Rukun dan damai','Rukun berarti akur dan saling membantu. Damai berarti tenang, tanpa pertengkaran.','Dimulai dari rumah, kelas, dan lingkungan kita.'],
+['🇮🇩','Hubungan dengan Pancasila','Cinta damai sesuai Sila ke-3 “Persatuan Indonesia”: kita berbeda-beda, tetapi tetap bersatu.','Sila ke-2 juga mengajarkan kita berlaku adil dan beradab terhadap sesama.'],
+['🌈','Berbeda itu indah','Vania gemar menari, Ella senang menggambar. Perbedaan tidak membuat kita bermusuhan.','Semua teman layak disayangi dan dihargai.']];
+acc.innerHTML=M.map(m=>`<button class="flip" onclick="this.classList.toggle('open')"><div class="ic">${m[0]}</div><h3>${m[1]}</h3><div class="more"><p>${m[2]}</p><p><b>${m[3]}</b></p></div><small>Sentuh untuk membuka</small></button>`).join('');
+/* kuis */
+const K=[
+['Apa arti cinta damai?',['Suka hidup rukun dan tidak bermusuhan','Suka menang sendiri','Suka bertengkar'],0],
+['Vania dan Ella dulu bersahabat. Apa kegemaran Ella?',['Menari','Menggambar','Bernyanyi'],1],
+['Mengapa Ella merasa sedih?',['Ia mendapat nilai kecil','Ia merasa dijauhi Vania','Ia tidak punya pensil'],1],
+['Jika temanmu marah kepadamu, apa yang sebaiknya kamu lakukan?',['Mengejeknya','Meminta maaf dan mengajaknya bicara','Pergi tanpa bicara'],1],
+['Sikap Ella yang baik sebaiknya…',['Menceritakan perasaan dengan baik','Memusuhi Vania','Menjelekkan Sasha'],0],
+['Sila ke-3 Pancasila berbunyi…',['Kemanusiaan yang adil dan beradab','Persatuan Indonesia','Keadilan sosial'],1],
+['Sasha anak baru. Apa yang kita lakukan?',['Menyambut dengan ramah','Tidak mau berteman','Mengejek'],0]];
+let qi=0,sc=0,locked=false;
+function qShow(){locked=false;if(qi>=K.length){const s=Math.round(sc/K.length*3);quiz.innerHTML=`<div class="stars">${'⭐'.repeat(s)}${'☆'.repeat(3-s)}</div><h2 style="text-align:center">Skormu ${sc} dari ${K.length}</h2><p style="text-align:center">${sc>=6?'Luar biasa! Kamu duta cinta damai! 🏆':sc>=4?'Bagus! Baca materi sekali lagi, ya. 💪':'Ayo coba lagi, kamu pasti bisa! 💖'}</p><p style="text-align:center"><button class="btn" onclick="qi=0;sc=0;qShow()">Main Lagi 🔄</button></p>`;return}
+const k=K[qi];quiz.innerHTML=`<div class="bar"><i style="width:${qi/K.length*100}%"></i></div><h2>Soal ${qi+1}/${K.length}: ${k[0]}</h2>${k[1].map((o,i)=>`<button class="opt" onclick="ans(this,${i})">${['A','B','C'][i]}. ${o}</button>`).join('')}<div class="fb" id="qf"></div><button class="btn" id="qn" style="display:none" onclick="qi++;qShow()">Lanjut ▶</button>`}
+function ans(b,i){if(locked)return;const k=K[qi];if(i===k[2]){locked=true;b.classList.add('ok');sc++;qf.textContent='Benar! 🎉';qn.style.display='inline-block'}else{b.classList.add('no');b.disabled=true;qf.textContent='Belum tepat, coba lagi! 💪'}}
+qShow();
+</script>
+</body>
+</html>
